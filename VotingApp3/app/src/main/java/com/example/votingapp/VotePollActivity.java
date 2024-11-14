@@ -80,9 +80,21 @@ public class VotePollActivity extends AppCompatActivity {
             return;
         }
 
+        // Get poll code and check if the user has voted already
+        String enteredCode = pollCodeEditText.getText().toString().trim();
         SharedPreferences sharedPreferences = getSharedPreferences("PollData", MODE_PRIVATE);
+
+        // Check if the user has already voted for this poll
+        boolean hasVoted = sharedPreferences.getBoolean(enteredCode + "_hasVoted", false);
+        if (hasVoted) {
+            Toast.makeText(this, "You have already voted in this poll!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // If not voted, proceed to submit the vote
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
+        // Increment vote count for the selected option
         for (int i = 0; i < optionRadioButtons.size(); i++) {
             if (optionRadioButtons.get(i).getId() == selectedOptionId) {
                 optionVotes[i]++;
@@ -90,7 +102,11 @@ public class VotePollActivity extends AppCompatActivity {
                 break;
             }
         }
+
+        // Mark that the user has voted for this poll
+        editor.putBoolean(enteredCode + "_hasVoted", true);
         editor.apply();
+
         Toast.makeText(this, "Vote submitted successfully!", Toast.LENGTH_SHORT).show();
 
         showResults();
@@ -98,5 +114,11 @@ public class VotePollActivity extends AppCompatActivity {
 
     private void showResults() {
         // Display the results in a new activity or update UI
+        // You can update the UI to show the vote counts or move to another activity
+        StringBuilder results = new StringBuilder();
+        for (int i = 0; i < optionVotes.length; i++) {
+            results.append("Option " + (i + 1) + ": " + optionVotes[i] + " votes\n");
+        }
+        Toast.makeText(this, results.toString(), Toast.LENGTH_LONG).show();
     }
 }
