@@ -1,0 +1,44 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/pollCodeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:hint="Enter Poll Code" />
+
+    <Button
+        android:id="@+id/submitCodeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Code" />
+
+    <TextView
+        android:id="@+id/pollTopicTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Poll Topic"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/optionsRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/voteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vote"
+        android:visibility="gone"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

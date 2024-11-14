@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Enter Username"
+        android:padding="16dp"
+        android:minHeight="48dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Username input field" />
+
+    <Button
+        android:id="@+id/createPollButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Poll"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:minHeight="48dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Create Poll Button" />
+
+    <Button
+        android:id="@+id/votePollButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vote Poll"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:minHeight="48dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Vote Poll Button" />
+
+    <Button
+        android:id="@+id/adminPortalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin Portal"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:minHeight="48dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Admin Portal Button" />
+
+</LinearLayout>

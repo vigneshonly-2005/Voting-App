@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <!-- Poll Topic TextView -->
+    <TextView
+        android:id="@+id/resultTopicTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Poll Topic"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Poll topic description" />
+
+    <!-- Option 1 Result TextView -->
+    <TextView
+        android:id="@+id/option1ResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Option 1 Result: 0 votes"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Option 1 result description" />
+
+    <!-- Option 2 Result TextView -->
+    <TextView
+        android:id="@+id/option2ResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Option 2 Result: 0 votes"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Option 2 result description" />
+
+    <!-- Back to Main Menu Button -->
+    <Button
+        android:id="@+id/backToMainButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Main Menu"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:minHeight="48dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Back to main menu button" />
+
+</LinearLayout>

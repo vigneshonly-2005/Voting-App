@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- EditText for Poll Topic -->
+    <EditText
+        android:id="@+id/topicEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:hint="Enter Poll Topic"
+        android:padding="16dp"
+        android:minHeight="48dp" />
+
+    <!-- EditText for Option 1 -->
+    <EditText
+        android:id="@+id/option1EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Option 1"
+        android:padding="16dp"
+        android:minHeight="48dp" />
+
+    <!-- EditText for Option 2 -->
+    <EditText
+        android:id="@+id/option2EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Option 2"
+        android:padding="16dp"
+        android:minHeight="48dp" />
+
+    <!-- Button to Create Poll -->
+    <Button
+        android:id="@+id/createPollButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Poll"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:minHeight="48dp" />
+
+</LinearLayout>
